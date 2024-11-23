@@ -1,21 +1,31 @@
 tekst = 'Witaj Świecie'
-print(tekst)
-print(type(tekst))
-tekst_upper = tekst.upper()
-print(tekst.upper())
-print(tekst_upper)
-print(tekst)
+print(tekst)  # Witaj Świecie
+print(type(tekst))  # <class 'str'>
+# teksty są niemutowalne
+tekst_upper = tekst.upper()  # """ Return a copy of the string converted to uppercase. """
+print(tekst.upper())  # WITAJ ŚWIECIE
+print(tekst_upper)  # WITAJ ŚWIECIE
+print(tekst)  # Witaj Świecie
+
 name = "Karol"
-print(len(name))
-print(name[0])  #
-print(name[1])
-print(name[2])
-print(name[3])
-print(name[4])
-print(name[2:4])
-print(name[:4])
-print(name[:])
+#       01234 - indeksowanie od zera
+print(len(name))  # len() sprawdzanie długości ciągu 5
+print(name[0])  # K - pierwsza litera ciągu
+print(name[1])  # a
+print(name[2])  # r
+print(name[3])  # o
+print(name[4])  # l
+# print(name[5]) # IndexError: string index out of range
+# slicowanie
+print(name[2:4])  # ro, tylko indeksy 2 i 3 z prawej strony zbiór otwarty
+print(name[:4])  # Karo od 0 do 3 (indeks 4 wyłączony)
+print(name[:])  # Karol
+
 str1 = "HELLO WORLD"
+# str1[0:5] = "HOLAA" #próba zmiany oryginalnego tekstu,
+# TypeError: 'str' object does not support item assignment, wynika z tego, że teksty są niemutowalne
+print(str1)  # HELLO WORLD
+
 my_str = "  Hello Everyone  "
 print(my_str)
 print(my_str.strip())
