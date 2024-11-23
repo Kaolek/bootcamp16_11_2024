@@ -40,3 +40,55 @@ print(dict_unique)
 list_unique = list(dict_unique)
 print(list_unique)
 print(list(dict.fromkeys(keys)))
+print(my_dict["A"])
+print(my_dict["B"])
+print(dict_with_integer[1])
+print(dict_with_all['D'])
+print(dict_with_all['C'])
+print(my_dict4.get("a"))
+print(my_dict4.get("E"))
+print(my_dict4.get("e", "Nie ma"))
+my_dict5 = {"Name": "Radek", "ID": 12345, "DDB": 1991, 'Address': "Warsaw"}
+print(my_dict5['DDB'])
+my_dict5['DDB'] = '1980'
+print(my_dict5)
+my_dict5['Address'] = "Warsaw Centrum"
+print(my_dict5)
+dict1 = {"DDB": 1995}
+print(dict1)
+print(type(dict1))
+my_dict5.update(dict1)
+print(my_dict5)
+my_dict5['Job'] = "Developer"
+print(my_dict5)
+dict2 = {'cpi': 3.41}
+print(dict2)
+my_dict5.update(dict2)
+print(my_dict5)
+print(my_dict5.pop("cpi"))
+print(my_dict5)
+print(my_dict5.popitem())
+print(my_dict5)
+del my_dict5['ID']
+print(my_dict5)
+my_dict5.clear()
+print(my_dict5)
+del my_dict5
+slownik = {'stary_klucz': 'wartosc'}
+slownik['nowy_klucz'] = slownik.pop('stary_klucz')
+print(slownik)
+my_dict5 = {'Name': 'Radek', 'ID': 12345, 'DDB': 1995, 'Address': 'Warsaw Centrum', 'Job': 'Developer', 'cpi': 3.41}
+my_dict_copy_ref = my_dict5
+print(id(my_dict5))
+print(id(my_dict_copy_ref))
+my_dict_copy = my_dict5.copy()
+my_dict5.clear()
+print(my_dict_copy)
+print(my_dict5)
+print(my_dict_copy_ref)
+print(f"{id(my_dict5)=}")
+print(f"{id(my_dict_copy_ref)=}")
+print(f"{id(my_dict_copy)=}")
+dict_small = {"x": 3}
+dict_small.update([('y', 3), ('z', 7)])
+print(dict_small)
