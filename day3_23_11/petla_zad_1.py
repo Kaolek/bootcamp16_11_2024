@@ -1,8 +1,4 @@
-for i in range(10):
-    print(i)
-
-for i in range(10):
-    print(i, i, sep=":")
+from itertools import zip_longest
 
 for i in range(10):
     print(i, end="")
@@ -67,7 +63,40 @@ for pozycja, osoba in enumerate(imiona):
 for p, o in enumerate(imiona, start=1):
     print(p, o)
 
-ludzie = ['radek', 'Janek', "Tomek", "Marek"]
+ludzie = ['radek', 'Janek', "Tomek", "Marek", "Ania"]
 wiek = [45, 40, 18, 23]
-for i in range(len(ludzie)):
-    print(ludzie[i], wiek[i])
+
+zipped = zip_longest(ludzie, wiek, fillvalue="NONE")
+print(type(zipped))
+zipped_tuple = tuple(zipped)
+print(zipped_tuple)
+for i in zipped:
+    print(i)
+print("-----------")
+for o, w in zipped:
+    print(o, w)
+print("*" * 25)
+for i in zipped_tuple:
+    print(i)
+for name, age in zipped_tuple:
+    print(name, age)
+
+for i in range(0, 10, 2):
+    print(i)
+
+for i in range(10, 0, -2):
+    print(i)
+
+for i in range(-10, 0, 2):
+    print(i)
+
+parzyste = [i for i in range(0, 10, 2)]
+print(parzyste)
+
+ang_pol = {'name': 'imię', 'cat': 'kot', 'water': 'woda'}
+pol_ang = {}
+print(ang_pol.items())
+for k, v in ang_pol.items():
+    pol_ang[v] = k
+print(pol_ang)
+print({v: k for k, v in ang_pol.items()})
