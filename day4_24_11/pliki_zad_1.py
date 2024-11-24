@@ -31,6 +31,8 @@ with open("test.log", "a") as file:
     file.write("Dodane\n")
     file.write("Dodane\n")
     file.write("Dośdane\n")
+    file.write("Dośżćdane\n")
+    file.write("Dośńóędane\n")
 with open("test.log", "r") as f:
     lines = f.read()
 print(lines)
