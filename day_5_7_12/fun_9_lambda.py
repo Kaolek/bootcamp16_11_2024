@@ -2,6 +2,8 @@
 # skrócony zapis funkcji
 # lambda zwraca wynik - return
 # funkcja anonimowa - deklaracja w miejscu wykonania
+from unicodedata import numeric
+
 from day_5_7_12.fun_2 import oblicz_vat
 
 odejmij = lambda a, b: a - b
@@ -52,30 +54,33 @@ print(oblicz_vat(1000, 23))
 print(oblicz_vat(vat=15, cena=1000))  # 1150.0
 
 wiek = lambda x: "dziecko" if x < 10 else ("nastolatek" if x < 18 else "dorosły")
-print(wiek(9)) # dziecko
-print(wiek(10)) # nastolatek
-print(wiek(17)) # nastolatek
-print(wiek(18)) # dorosły
-print(wiek(25)) # dorosły
+print(wiek(9))  # dziecko
+print(wiek(10))  # nastolatek
+print(wiek(17))  # nastolatek
+print(wiek(18))  # dorosły
+print(wiek(25))  # dorosły
 
 lista = [1, 2, 3, 45, 67, 78, 100, 200, 300]
 
 lista_wyn = []
 for i in lista:
     lista_wyn.append(i * 2)
-print(lista_wyn) # [2, 4, 6, 90, 134, 156, 200, 400, 600]
+print(lista_wyn)  # [2, 4, 6, 90, 134, 156, 200, 400, 600]
 
-print([i * 2 for i in lista]) # [2, 4, 6, 90, 134, 156, 200, 400, 600]
+print([i * 2 for i in lista])  # [2, 4, 6, 90, 134, 156, 200, 400, 600]
+
+
 # print(lista * 2) # [1, 2, 3, 45, 67, 78, 100, 200, 300, 1, 2, 3, 45, 67, 78, 100, 200, 300]
 
 def zmien(x):
     return x * 2
 
+
 lista_wyn_f = []
 for i in lista:
     lista_wyn_f.append(zmien(i))
 
-print(lista_wyn_f) # [2, 4, 6, 90, 134, 156, 200, 400, 600]
+print(lista_wyn_f)  # [2, 4, 6, 90, 134, 156, 200, 400, 600]
 
 # map() - mapowanie, zmienia dane wg zadanej funkcji
 print(f"Zastosowanie map(): {list(map(zmien, lista))}")
@@ -98,10 +103,10 @@ lista_parzyste = []
 for i in lista:
     if i % 2 == 0:
         lista_parzyste.append(i)
-print(lista_parzyste) # [2, 78, 100, 200, 300]
+print(lista_parzyste)  # [2, 78, 100, 200, 300]
 
 # filter()
-print(f"Zastosowanie filter() {list(filter(lambda x: x <3, lista))}")
+print(f"Zastosowanie filter() {list(filter(lambda x: x < 3, lista))}")
 # Zastosowanie filter() [1, 2]
 print(f"Zastosowanie filter() {list(filter(lambda x: x > 15, lista))}")
 # Zastosowanie filter() [45, 67, 78, 100, 200, 300]
@@ -111,3 +116,17 @@ print(f"Zastosowanie filter() {list(filter(lambda x: 5 < x < 200, lista))}")
 #  Zastosowanie filter() [45, 67, 78, 100]
 print(f"Zastosowanie filter() {list(filter(lambda x: x % 2 == 0, lista))}")
 #  Zastosowanie filter() [2, 78, 100, 200, 300]
+
+list2 = ['one', 'TWO', 'three', 'FOUR']
+print(f"Filter: {list(filter(lambda x: x.isupper(), list2))}")  # Filter: ['TWO', 'FOUR']
+print(f"Filter: {list(filter(lambda x: x.islower(), list2))}")  # Filter: ['one', 'three']
+
+list3 = ['one', 'two2', 'three3', '88', '99', '102', '1.23']
+numeric = list(filter(lambda x: x.isnumeric(), list3)) # Filter: ['one', 'three']
+print((f"Numeric: {numeric}")) # Numeric: ['88', '99', '102']
+
+alpha = list(filter(lambda x: x.isalpha(), list3))
+print((f"Alpha: {alpha}")) # Alpha: ['one']
+
+mix = list(filter(lambda x: x.isnumeric() and not x.isalpha(), list3))
+print((f"Mix: {mix}")) # Mix: ['88', '99', '102']
