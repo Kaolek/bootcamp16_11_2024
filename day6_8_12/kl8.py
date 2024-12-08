@@ -9,7 +9,7 @@ class Ptak(ABC):
     Klasa opisująca ptaka w pythonie
     """
 
-    def __int__(self, gatunek, szybkosc):
+    def __init__(self, gatunek, szybkosc):
         self.gatunek = gatunek
         self.szybkosc = szybkosc
 
@@ -28,6 +28,9 @@ class Kura(Ptak):
     def wydaj_odglos(self):
         print("Ko ko ko ko")
 
+    def dziobanie(self):
+        print("Tu", self.gatunek, "Idę sobie podziobać")
+
 
 class Orzeł(Ptak):
     """
@@ -36,6 +39,9 @@ class Orzeł(Ptak):
 
     def wydaj_glos(self):
         print("Kier Kir Kier")
+
+    def polowanie(self):
+        print('Tu', self.gatunek, "Rozpoczynam polowanie")
 
 
 #
@@ -53,3 +59,6 @@ or2.latam()
 
 or2.wydaj_glos()
 kur2.wydaj_odglos()
+
+or2.polowanie()
+kur2.dziobanie()
