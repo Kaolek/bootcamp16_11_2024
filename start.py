@@ -16,3 +16,4 @@ pk.info()
 # sterowanie widocznością elementów pakietu
 #__all__ = ['info']
 pakiet.info()
+pakiet.pożegnanie()
