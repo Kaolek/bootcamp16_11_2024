@@ -21,6 +21,22 @@ class Dom:
     def metraz_domu(self):
         print(f"Dom ma {self.__metraz} metrów")
 
+    def zmien_okna(self):
+        odp = int(input("Podaj liczbę okien"))
+        self.__liczba_okien = odp
+
+    def zmien_metraz(self):
+        odp = int(input("Podaj nowy metraż"))
+        self.__metraz = odp
+
+    def zmien_kolor(self):
+        odp = int(input("Podaj nowy kolor"))
+        self.__kolor = odp
+        self.kolor_domu()
+
+    def farba(self):
+        print("Zabrakło farby")
+
 dom = Dom("niebieski", 6, 155)
 dom.kolor_domu() # Dom ma kolor niebieski
 dom.liczba_okien_domu() # Dom ma 6 okien
