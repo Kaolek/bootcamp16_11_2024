@@ -47,3 +47,19 @@ class Count:
 print("--------")
 counter = Count(1, 20)
 print(next(counter))  # 1
+print(next(counter))  # 2
+print(next(counter))  # 3
+print(next(counter))  # 4
+
+print("-------")
+while True:
+    try:
+        number = next(counter)
+        print(number)
+    except StopIteration:
+        break
+
+counter2 = Count(1, 20)
+print(next(counter2))  # 1
+print(next(counter2))  # 2
+print(next(counter2))  # 3
