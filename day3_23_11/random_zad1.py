@@ -1,5 +1,6 @@
 import random
-from operator import index
+# import - służy do dołączenia do naszego pliku innego pliku, biblioteki, frameworka itd..
+# random - działania na liczbach pseudolosowych
 
 print(random.randint(1, 6))  # int od 1 do 6
 print(random.randrange(1, 6))  # int od 1 do 5
@@ -24,6 +25,25 @@ lista_kule = list(range(1, 50))  # od 1 do 49
 wyn = random.choice(lista_kule)
 lista_kule.remove(wyn)
 print(wyn)
+wyn = random.choice(lista_kule)
+lista_kule.remove(wyn)
+print(wyn)
+wyn = random.choice(lista_kule)
+lista_kule.remove(wyn)
+print(wyn)
+wyn = random.choice(lista_kule)
+lista_kule.remove(wyn)
+print(wyn)
+wyn = random.choice(lista_kule)
+lista_kule.remove(wyn)
+print(wyn)
+wyn = random.choice(lista_kule)
+lista_kule.remove(wyn)
+print(wyn)
+wyn = random.choice(lista_kule)
+lista_kule.remove(wyn)
+print(wyn)
+
 print(random.choices(lista_kule, k=6))  # losuje z powtórzeniami [9, 44, 19, 20, 27, 15]
 print(random.sample(lista_kule, k=6))  # [2, 27, 20, 21, 7, 24] losuje bez powtórzeń
 print(random.sample(lista_kule, 6))  # [2, 27, 20, 21, 7, 24] losuje bez powtórzeń
