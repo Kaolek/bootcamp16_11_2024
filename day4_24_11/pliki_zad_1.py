@@ -3,17 +3,28 @@
 # context manager
 # with
 # to pozwala na bezpieczną pracę z plikami
-from webbrowser import open_new
+#  ========= ===============================================================
+#     Character Meaning
+#     --------- ---------------------------------------------------------------
+#     'r'       open for reading (default)
+#     'w'       open for writing, truncating the file first
+#     'x'       create a new file and open it for writing
+#     'a'       open for writing, appending to the end of the file if it exists
+#     'b'       binary mode
+#     't'       text mode (default)
+#     '+'       open a disk file for updating (reading and writing)
+#     ========= ===============================================================
 
 with open("test.log", "w") as fh:  # filehandler
     fh.write("Powitanie\n")
     fh.write("Kolejne\n")
     fh.write("Jeszcze jedno\n")
 
-with open("../test.log", "w") as fh:
+with open("../test.log", "w") as fh:  # # filehandler, ten plik bedzie w nadrzędnym katalogu
     fh.write("Powitanie\n")
 
-with open("../test.log", "w") as fh:
+# w - kasuje plik jesli istnieje
+with open("../test.log", "w") as fh:  # filehandler, ten plik bedzie w nadrzędnym katalogu
     fh.write("Nadpisane\n")
 
 # with open("../test.log", "x") as fh:
@@ -36,3 +47,14 @@ with open("test.log", "a") as file:
 with open("test.log", "r") as f:
     lines = f.read()
 print(lines)
+# Powitanie
+# Kolejne
+# Jeszcze jedno
+# Dodane
+# Dodane
+# Dodane
+# Dodane
+# Dodane
+# Dośdane
+# Dośżćdane
+# Dośńóędane
