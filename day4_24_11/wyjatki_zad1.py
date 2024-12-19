@@ -1,3 +1,5 @@
+# wyjątki błędy wykonania programu
+
 # print(5 / 0)
 # Traceback (most recent call last):
 #   File "/Users/karolkontek/PycharmProjects/bootcamp16_11_2024/day4_24_11/wyjatki_zad1.py", line 2, in <module>
@@ -24,3 +26,15 @@ else:
 finally:
     print("Obliczenia wykonane")
 print("Program nadal działa")
+# Nie dziel przezz zero
+# Program nadal działa
+# Bład typu
+# Program nadal działa
+# Wynik 30.0
+# Program nadal działa
+# Bład wartosci
+# Obliczenia wykonane
+# Program nadal działa
+# Wynik 30.0
+# Obliczenia wykonane
+# Program nadal działa
