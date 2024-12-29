@@ -1,9 +1,8 @@
 from functools import reduce, lru_cache
 
 # 1
-list = [[1, 2], [3, 4], [5, 6]]
-#  proszę o podpowiedź jak ruszyć to zadanie
-
+list1 = [[1, 2], [3, 4], [5, 6]]
+# proszę o sugestię rozwiązania
 
 # 2
 my_list = [1, 2, 3, 3, 6, 7, 3, 8]
@@ -13,7 +12,14 @@ while element_to_remove in my_list:
 
 print(my_list)  # [1, 2, 6, 7, 8]
 
+# 4
+tuple = [(1, 3), (3, 2), (2, 1)]
+print(sorted(tuple, key=lambda x: x[1]))
+# [(2, 1), (3, 2), (1, 3)]
 
+# 6
+imie = "Karol"
+print("Mam na {}!!!".format(imie) ) # Mam na Karol!!!
 
 # 8
 @lru_cache(1000)
