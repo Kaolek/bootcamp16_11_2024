@@ -6,12 +6,12 @@ rows = []
 filename = 'dane/records_records_3.csv' # wiele wierszy
 # filename = 'dane/records_discount.csv'  # wiele wierszy oddzielone ;
 
-with open(filename, 'r') as f:
-    dialect = csv.Sniffer().sniff(f.read(1024)) # odczytalismy 1024 elementy
+with open(filename, 'r') as csv_f:
+    dialect = csv.Sniffer().sniff(csv_f.read(1024)) # odczytalismy 1024 elementy
     print(dialect.delimiter) # ;
-    f.seek(0) # ponowne ustawienie odczytu pliku na początek
+    csv_f.seek(0) # ponowne ustawienie odczytu pliku na początek
     # csvreader = csv.reader(f, delimiter=";")  # narzedzie do odczytu
-    csvreader = csv.reader(f, delimiter=dialect.delimiter) # narzedzie do odczytu
+    csvreader = csv.reader(csv_f, delimiter=dialect.delimiter) # narzedzie do odczytu
     print(csvreader) # <_csv.reader object at 0x000002510ADBE5C0>
     # iterator - można uzywac go sekwencji
     # pobierac po kolei pojedyncze elementy next()
