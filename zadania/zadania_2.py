@@ -1,7 +1,7 @@
 from functools import reduce, lru_cache
 
 # 1
-list1 = [[1, 2], [3, 4], [5, 6]]
+list = [[1, 2], [3, 4], [5, 6]]
 # proszę o sugestię rozwiązania
 
 # 2
