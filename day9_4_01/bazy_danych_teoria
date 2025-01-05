@@ -1,0 +1,18 @@
+Baza danych
+wyspecjalizowane systemy do przechowywania danych
+posiadają silnuk, który wysokoefektywnie pozwala prazować z danymi zawartymi w bazie danych
+mozna podzielić bazy danych na relacyjne i nierelacyjne
+
+Bazy relacyjne(RDBNS)
+przechowują dane w postaci tabel i powiązań między nimi
+posługują sie za pomocą języka SQL
+
+Mamy kilka odmian baz danych typu SQL
+- sqlite - baza przechowywana w jednym pliku
+
+Wbudowane aplikacje:
+Wszystkie aplikacje, które będą przenoszone, które nie wymagają rozszerzenia
+np lokalne aplikacje dla jednego użytkownika, aplikacjie mobilne i gry
+
+Aplikacja dla wielu użytkowników:
+Jeżeli pracujesz nad aplikacją
