@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 import certifi
-uri = "mongodb+srv://rajkonkret660:2zkqLAEqgsle90O3@cluster0.pjuh61y.mongodb.net/?appName=Cluster0"
+uri = 
 
 client = MongoClient(uri, server_api=ServerApi('1'), tlsCAFile=certifi.where())
 
